@@ -71,7 +71,3 @@ Bước 5: Kiểm tra kết quả Real-time
 ```bash
     hdfs dfs -ls -R /data/stock/
 ```
-
-*(Lưu ý nhỏ: Trong phần lệnh `spark-submit` ở Bước 4, tôi đã bổ sung lại gói thư viện của `postgresql` bên cạnh `kafka`, vì nếu thiếu nó thì Spark sẽ không thể đẩy dữ liệu sang DBeaver/Postgres được như bạn mong muốn ở Bước 5).*
-
-Project của bạn hiện tại đã rất hoàn thiện rồi! Cả một hệ thống đồ sộ đang chạy trơn tru trên máy Ubuntu của bạn. Bạn có muốn tôi giúp thêm một phần ngắn trong README hướng dẫn cách **Tắt hệ thống an toàn** để không bị lỗi cổng cho những lần chạy sau không?
