@@ -30,7 +30,6 @@ public class StockProducer {
 
     public static void main(String[] args) {
         Properties props = new Properties();
-        // Giữ localhost vì chạy trong Ubuntu
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
@@ -48,17 +47,25 @@ public class StockProducer {
     private static void generateAndSendTick(String symbol, KafkaProducer<String, String> producer) {
         try {
             double currentPrice = stockPrices.get(symbol);
-            double volatility = 0.002; 
+            // Giữ volatility thấp để giá chạy ổn định  
+            double volatility = 0.001; 
             double change = 1 + (ThreadLocalRandom.current().nextGaussian() * volatility);
             double newPrice = Math.round(currentPrice * change);
+            stockPrices.get(symbol);
             stockPrices.put(symbol, newPrice);
 
             double spread = ThreadLocalRandom.current().nextDouble(10, 100);
             double bid = Math.round(newPrice - spread);
             double ask = Math.round(newPrice + spread);
+            
+            // Volume cơ bản từ 1000 đến 50.000
             int volume = ThreadLocalRandom.current().nextInt(100, 5000) * 10;
             
-            // SỬA TẠI ĐÂY: Gửi nguyên Miliseconds sang Spark
+            // Xác suất 5% (khoảng 1/20 lần gửi) sẽ kích hoạt Volume đột biến
+            if (ThreadLocalRandom.current().nextDouble() < 0.05) {
+                volume = volume * 15; 
+            }
+
             long timestamp = System.currentTimeMillis(); 
 
             StockTick tick = new StockTick(symbol, newPrice, volume, bid, ask, timestamp);
