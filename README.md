@@ -53,11 +53,11 @@ export PATH=$JAVA_HOME/bin:$PATH
 ```bash
 sudo rm -rf ~/spark_checkpoints
 sudo rm -rf /tmp/spark_checkpoint*
-hdfs dfs -rm -r /data/stock/*
 ```
 # 3. Khởi chạy Spark Streaming (Đã tích hợp thư viện Kafka & PostgreSQL)
 ```bash
 spark-submit \
+  --master "local[*]" \
   --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,org.postgresql:postgresql:42.7.2 \
   spark-processor.py
 ```
