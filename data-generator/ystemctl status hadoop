@@ -1,0 +1,19 @@
+[0;1;31m×[0m kafka.service - Apache Kafka Server
+     Loaded: loaded (]8;;file://Lolicon/etc/systemd/system/kafka.service/etc/systemd/system/kafka.service]8;;; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Wed 2026-04-15 11:27:39 +07; 10s ago
+   Duration: 2.797s
+       Docs: ]8;;http://kafka.apache.org/documentation.htmlhttp://kafka.apache.org/documentation.html]8;;
+    Process: 2387652 ExecStart=/home/hadoop/opt/bin/kafka-server-start.sh /home/hadoop/opt/config/server.properties [0;1;31m(code=exited, status=1/FAILURE)[0m
+   Main PID: 2387652 (code=exited, status=1/FAILURE)
+        CPU: 3.350s
+
+Thg 4 15 11:27:38 Lolicon kafka-server-start.sh[2387652]:         at scala.collection.TraversableLike.flatMap(TraversableLike.scala:293)
+Thg 4 15 11:27:38 Lolicon kafka-server-start.sh[2387652]:         at scala.collection.TraversableLike.flatMap$(TraversableLike.scala:290)
+Thg 4 15 11:27:38 Lolicon kafka-server-start.sh[2387652]:         at scala.collection.AbstractTraversable.flatMap(Traversable.scala:108)
+Thg 4 15 11:27:38 Lolicon kafka-server-start.sh[2387652]:         at kafka.log.LogManager.lockLogDirs(LogManager.scala:253)
+Thg 4 15 11:27:38 Lolicon kafka-server-start.sh[2387652]:         at kafka.log.LogManager.<init>(LogManager.scala:123)
+Thg 4 15 11:27:38 Lolicon kafka-server-start.sh[2387652]:         at kafka.log.LogManager$.apply(LogManager.scala:1451)
+Thg 4 15 11:27:38 Lolicon kafka-server-start.sh[2387652]:         at kafka.server.KafkaServer.startup(KafkaServer.scala:280)
+Thg 4 15 11:27:38 Lolicon kafka-server-start.sh[2387652]:         at kafka.Kafka$.main(Kafka.scala:113)
+Thg 4 15 11:27:38 Lolicon kafka-server-start.sh[2387652]:         at kafka.Kafka.main(Kafka.scala)
+Thg 4 15 11:27:38 Lolicon kafka-server-start.sh[2387652]: [2026-04-15 11:27:38,951] INFO [KafkaServer id=0] shutting down (kafka.server.KafkaServer)

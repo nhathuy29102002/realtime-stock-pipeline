@@ -68,6 +68,7 @@ Bước 5: Kiểm tra kết quả Real-time
     Mở ứng dụng DBeaver, kết nối vào cơ sở dữ liệu stock_db và mở bảng stock_summary để xem dữ liệu được cập nhật theo thời gian thực.
 
     Kiểm tra HDFS để xem file Parquet đã được lưu:
+
 ```bash
     hdfs dfs -ls -R /data/stock/
 ```
