@@ -63,11 +63,11 @@ spark-submit \
 ```
 Bước 5: Kiểm tra kết quả Real-time
 
-    Theo dõi Terminal 5, bạn sẽ thấy Spark in ra các Batch dữ liệu chứa 4 chỉ số: Giá trung bình, Tổng khối lượng, Giá cao nhất, Giá thấp nhất mỗi phút.
+Theo dõi Terminal 5, Spark in ra các Batch dữ liệu chứa 4 chỉ số: Giá trung bình, Tổng khối lượng, Giá cao nhất, Giá thấp nhất mỗi phút.
 
-    Mở ứng dụng DBeaver, kết nối vào cơ sở dữ liệu stock_db và mở bảng stock_summary để xem dữ liệu được cập nhật theo thời gian thực.
+Mở ứng dụng DBeaver, kết nối vào cơ sở dữ liệu stock_db và mở bảng stock_summary để xem dữ liệu được cập nhật theo thời gian thực.
 
-    Kiểm tra HDFS để xem file Parquet đã được lưu:
+Kiểm tra HDFS để xem file Parquet đã được lưu:
 
 ```bash
     hdfs dfs -ls -R /data/stock/
