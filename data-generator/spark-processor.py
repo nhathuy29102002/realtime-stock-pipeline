@@ -116,6 +116,7 @@ def write_to_postgres(batch_df, batch_id):
         final_df.unpersist()
 
 pg_query = agg_df.writeStream \
+    .trigger(processingTime="1 minute") \
     .foreachBatch(write_to_postgres) \
     .option("checkpointLocation", "file:///home/hadoop/spark_checkpoints/postgres") \
     .start()
@@ -123,6 +124,7 @@ pg_query = agg_df.writeStream \
 raw_query = parsed_df \
     .withColumn("date", current_date()) \
     .writeStream \
+    .trigger(processingTime="1 minute") \
     .partitionBy("date") \
     .format("parquet") \
     .option("path", f"{HDFS_URI}/data/stock/raw/") \
@@ -132,6 +134,7 @@ raw_query = parsed_df \
 agg_hdfs_query = agg_df \
     .withColumn("date", current_date()) \
     .writeStream \
+    .trigger(processingTime="1 minute") \
     .partitionBy("date") \
     .format("parquet") \
     .option("path", f"{HDFS_URI}/data/stock/aggregated/") \

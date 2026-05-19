@@ -1,0 +1,817 @@
+26/05/19 10:50:33 WARN SparkConf: The configuration key 'spark.yarn.executor.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.executor.memoryOverhead' instead.
+26/05/19 10:50:33 WARN SparkConf: The configuration key 'spark.yarn.driver.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.driver.memoryOverhead' instead.
+:: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /home/hadoop/.ivy2/cache
+The jars for the packages stored in: /home/hadoop/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+org.postgresql#postgresql added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-e7d66ad8-951e-4ce9-aed1-ce32054452ea;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.0 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.0 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.3 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in local-m2-cache
+	found com.google.code.findbugs#jsr305;3.0.0 in local-m2-cache
+	found org.apache.commons#commons-pool2;2.11.1 in local-m2-cache
+	found org.postgresql#postgresql;42.7.2 in central
+	found org.checkerframework#checker-qual;3.42.0 in central
+:: resolution report :: resolve 469ms :: artifacts dl 12ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from local-m2-cache in [default]
+	commons-logging#commons-logging;1.1.3 from local-m2-cache in [default]
+	org.apache.commons#commons-pool2;2.11.1 from local-m2-cache in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.0 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.0 from central in [default]
+	org.checkerframework#checker-qual;3.42.0 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.postgresql#postgresql;42.7.2 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   13  |   0   |   0   |   0   ||   13  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-e7d66ad8-951e-4ce9-aed1-ce32054452ea
+	confs: [default]
+	0 artifacts copied, 13 already retrieved (0kB/7ms)
+26/05/19 10:50:34 WARN SparkConf: The configuration key 'spark.yarn.executor.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.executor.memoryOverhead' instead.
+26/05/19 10:50:34 WARN SparkConf: The configuration key 'spark.yarn.driver.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.driver.memoryOverhead' instead.
+26/05/19 10:50:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/19 10:50:35 WARN SparkConf: The configuration key 'spark.yarn.executor.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.executor.memoryOverhead' instead.
+26/05/19 10:50:35 WARN SparkConf: The configuration key 'spark.yarn.driver.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.driver.memoryOverhead' instead.
+26/05/19 10:50:35 WARN SparkConf: The configuration key 'spark.yarn.executor.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.executor.memoryOverhead' instead.
+26/05/19 10:50:35 WARN SparkConf: The configuration key 'spark.yarn.driver.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.driver.memoryOverhead' instead.
+26/05/19 10:50:35 INFO SparkContext: Running Spark version 3.5.6
+26/05/19 10:50:35 INFO SparkContext: OS info Linux, 6.17.0-23-generic, amd64
+26/05/19 10:50:35 INFO SparkContext: Java version 11.0.30
+26/05/19 10:50:35 INFO ResourceUtils: ==============================================================
+26/05/19 10:50:36 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/05/19 10:50:36 INFO ResourceUtils: ==============================================================
+26/05/19 10:50:36 INFO SparkContext: Submitted application: Realtime-Stock-Pipeline
+26/05/19 10:50:36 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memoryOverhead -> name: memoryOverhead, amount: 384, script: , vendor: , cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 2048, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/05/19 10:50:36 INFO ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+26/05/19 10:50:36 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/05/19 10:50:36 INFO SecurityManager: Changing view acls to: hadoop
+26/05/19 10:50:36 INFO SecurityManager: Changing modify acls to: hadoop
+26/05/19 10:50:36 INFO SecurityManager: Changing view acls groups to: 
+26/05/19 10:50:36 INFO SecurityManager: Changing modify acls groups to: 
+26/05/19 10:50:36 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: hadoop; groups with view permissions: EMPTY; users with modify permissions: hadoop; groups with modify permissions: EMPTY
+26/05/19 10:50:36 INFO Utils: Successfully started service 'sparkDriver' on port 36231.
+26/05/19 10:50:36 INFO SparkEnv: Registering MapOutputTracker
+26/05/19 10:50:36 INFO SparkEnv: Registering BlockManagerMaster
+26/05/19 10:50:36 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/05/19 10:50:36 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/05/19 10:50:36 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/05/19 10:50:36 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-7c6c9b02-3210-44f8-bd46-f24027595d23
+26/05/19 10:50:36 INFO MemoryStore: MemoryStore started with capacity 1048.8 MiB
+26/05/19 10:50:36 INFO SparkEnv: Registering OutputCommitCoordinator
+26/05/19 10:50:36 INFO JettyUtils: Start Jetty 127.0.0.1:8200 for SparkUI
+26/05/19 10:50:36 INFO Utils: Successfully started service 'SparkUI' on port 8200.
+26/05/19 10:50:36 INFO SparkContext: Added JAR file:///home/hadoop/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar at spark://localhost:36231/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO SparkContext: Added JAR file:///home/hadoop/.ivy2/jars/org.postgresql_postgresql-42.7.2.jar at spark://localhost:36231/jars/org.postgresql_postgresql-42.7.2.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO SparkContext: Added JAR file:///home/hadoop/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar at spark://localhost:36231/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO SparkContext: Added JAR file:///home/hadoop/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at spark://localhost:36231/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO SparkContext: Added JAR file:///home/hadoop/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://localhost:36231/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO SparkContext: Added JAR file:///home/hadoop/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://localhost:36231/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO SparkContext: Added JAR file:///home/hadoop/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://localhost:36231/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO SparkContext: Added JAR file:///home/hadoop/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://localhost:36231/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO SparkContext: Added JAR file:///home/hadoop/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar at spark://localhost:36231/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO SparkContext: Added JAR file:///home/hadoop/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at spark://localhost:36231/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO SparkContext: Added JAR file:///home/hadoop/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://localhost:36231/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO SparkContext: Added JAR file:///home/hadoop/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://localhost:36231/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO SparkContext: Added JAR file:///home/hadoop/.ivy2/jars/org.checkerframework_checker-qual-3.42.0.jar at spark://localhost:36231/jars/org.checkerframework_checker-qual-3.42.0.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO SparkContext: Added file file:///home/hadoop/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar at file:///home/hadoop/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO Utils: Copying /home/hadoop/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar
+26/05/19 10:50:36 INFO SparkContext: Added file file:///home/hadoop/.ivy2/jars/org.postgresql_postgresql-42.7.2.jar at file:///home/hadoop/.ivy2/jars/org.postgresql_postgresql-42.7.2.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO Utils: Copying /home/hadoop/.ivy2/jars/org.postgresql_postgresql-42.7.2.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.postgresql_postgresql-42.7.2.jar
+26/05/19 10:50:36 INFO SparkContext: Added file file:///home/hadoop/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar at file:///home/hadoop/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO Utils: Copying /home/hadoop/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar
+26/05/19 10:50:36 INFO SparkContext: Added file file:///home/hadoop/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at file:///home/hadoop/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO Utils: Copying /home/hadoop/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.kafka_kafka-clients-3.4.1.jar
+26/05/19 10:50:36 INFO SparkContext: Added file file:///home/hadoop/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at file:///home/hadoop/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO Utils: Copying /home/hadoop/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/com.google.code.findbugs_jsr305-3.0.0.jar
+26/05/19 10:50:36 INFO SparkContext: Added file file:///home/hadoop/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at file:///home/hadoop/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO Utils: Copying /home/hadoop/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.commons_commons-pool2-2.11.1.jar
+26/05/19 10:50:36 INFO SparkContext: Added file file:///home/hadoop/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at file:///home/hadoop/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1779162635968
+26/05/19 10:50:36 INFO Utils: Copying /home/hadoop/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+26/05/19 10:50:37 INFO SparkContext: Added file file:///home/hadoop/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at file:///home/hadoop/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Copying /home/hadoop/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.lz4_lz4-java-1.8.0.jar
+26/05/19 10:50:37 INFO SparkContext: Added file file:///home/hadoop/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar at file:///home/hadoop/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Copying /home/hadoop/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.xerial.snappy_snappy-java-1.1.10.3.jar
+26/05/19 10:50:37 INFO SparkContext: Added file file:///home/hadoop/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at file:///home/hadoop/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Copying /home/hadoop/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.slf4j_slf4j-api-2.0.7.jar
+26/05/19 10:50:37 INFO SparkContext: Added file file:///home/hadoop/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at file:///home/hadoop/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Copying /home/hadoop/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+26/05/19 10:50:37 INFO SparkContext: Added file file:///home/hadoop/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at file:///home/hadoop/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Copying /home/hadoop/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/commons-logging_commons-logging-1.1.3.jar
+26/05/19 10:50:37 INFO SparkContext: Added file file:///home/hadoop/.ivy2/jars/org.checkerframework_checker-qual-3.42.0.jar at file:///home/hadoop/.ivy2/jars/org.checkerframework_checker-qual-3.42.0.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Copying /home/hadoop/.ivy2/jars/org.checkerframework_checker-qual-3.42.0.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.checkerframework_checker-qual-3.42.0.jar
+26/05/19 10:50:37 INFO Executor: Starting executor ID driver on host localhost
+26/05/19 10:50:37 INFO Executor: OS info Linux, 6.17.0-23-generic, amd64
+26/05/19 10:50:37 INFO Executor: Java version 11.0.30
+26/05/19 10:50:37 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/05/19 10:50:37 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@69adf615 for default.
+26/05/19 10:50:37 INFO Executor: Fetching file:///home/hadoop/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: /home/hadoop/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar
+26/05/19 10:50:37 INFO Executor: Fetching file:///home/hadoop/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: /home/hadoop/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar
+26/05/19 10:50:37 INFO Executor: Fetching file:///home/hadoop/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: /home/hadoop/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+26/05/19 10:50:37 INFO Executor: Fetching file:///home/hadoop/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: /home/hadoop/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.commons_commons-pool2-2.11.1.jar
+26/05/19 10:50:37 INFO Executor: Fetching file:///home/hadoop/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: /home/hadoop/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.xerial.snappy_snappy-java-1.1.10.3.jar
+26/05/19 10:50:37 INFO Executor: Fetching file:///home/hadoop/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: /home/hadoop/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.lz4_lz4-java-1.8.0.jar
+26/05/19 10:50:37 INFO Executor: Fetching file:///home/hadoop/.ivy2/jars/org.postgresql_postgresql-42.7.2.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: /home/hadoop/.ivy2/jars/org.postgresql_postgresql-42.7.2.jar has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.postgresql_postgresql-42.7.2.jar
+26/05/19 10:50:37 INFO Executor: Fetching file:///home/hadoop/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: /home/hadoop/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.slf4j_slf4j-api-2.0.7.jar
+26/05/19 10:50:37 INFO Executor: Fetching file:///home/hadoop/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: /home/hadoop/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+26/05/19 10:50:37 INFO Executor: Fetching file:///home/hadoop/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: /home/hadoop/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/commons-logging_commons-logging-1.1.3.jar
+26/05/19 10:50:37 INFO Executor: Fetching file:///home/hadoop/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: /home/hadoop/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/com.google.code.findbugs_jsr305-3.0.0.jar
+26/05/19 10:50:37 INFO Executor: Fetching file:///home/hadoop/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: /home/hadoop/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.kafka_kafka-clients-3.4.1.jar
+26/05/19 10:50:37 INFO Executor: Fetching file:///home/hadoop/.ivy2/jars/org.checkerframework_checker-qual-3.42.0.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: /home/hadoop/.ivy2/jars/org.checkerframework_checker-qual-3.42.0.jar has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.checkerframework_checker-qual-3.42.0.jar
+26/05/19 10:50:37 INFO Executor: Fetching spark://localhost:36231/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO TransportClientFactory: Successfully created connection to localhost/127.0.0.1:36231 after 32 ms (0 ms spent in bootstraps)
+26/05/19 10:50:37 INFO Utils: Fetching spark://localhost:36231/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp13737446862453450415.tmp
+26/05/19 10:50:37 INFO Utils: /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp13737446862453450415.tmp has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.kafka_kafka-clients-3.4.1.jar
+26/05/19 10:50:37 INFO Executor: Adding file:/tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.kafka_kafka-clients-3.4.1.jar to class loader default
+26/05/19 10:50:37 INFO Executor: Fetching spark://localhost:36231/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Fetching spark://localhost:36231/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp13708962390222145561.tmp
+26/05/19 10:50:37 INFO Utils: /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp13708962390222145561.tmp has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+26/05/19 10:50:37 INFO Executor: Adding file:/tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.hadoop_hadoop-client-api-3.3.4.jar to class loader default
+26/05/19 10:50:37 INFO Executor: Fetching spark://localhost:36231/jars/org.postgresql_postgresql-42.7.2.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Fetching spark://localhost:36231/jars/org.postgresql_postgresql-42.7.2.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp6984026433502720956.tmp
+26/05/19 10:50:37 INFO Utils: /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp6984026433502720956.tmp has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.postgresql_postgresql-42.7.2.jar
+26/05/19 10:50:37 INFO Executor: Adding file:/tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.postgresql_postgresql-42.7.2.jar to class loader default
+26/05/19 10:50:37 INFO Executor: Fetching spark://localhost:36231/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Fetching spark://localhost:36231/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp15351937707386429158.tmp
+26/05/19 10:50:37 INFO Utils: /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp15351937707386429158.tmp has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.slf4j_slf4j-api-2.0.7.jar
+26/05/19 10:50:37 INFO Executor: Adding file:/tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.slf4j_slf4j-api-2.0.7.jar to class loader default
+26/05/19 10:50:37 INFO Executor: Fetching spark://localhost:36231/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Fetching spark://localhost:36231/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp2829492884639672812.tmp
+26/05/19 10:50:37 INFO Utils: /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp2829492884639672812.tmp has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar
+26/05/19 10:50:37 INFO Executor: Adding file:/tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.0.jar to class loader default
+26/05/19 10:50:37 INFO Executor: Fetching spark://localhost:36231/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Fetching spark://localhost:36231/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp7794490625516668101.tmp
+26/05/19 10:50:37 INFO Utils: /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp7794490625516668101.tmp has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar
+26/05/19 10:50:37 INFO Executor: Adding file:/tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.0.jar to class loader default
+26/05/19 10:50:37 INFO Executor: Fetching spark://localhost:36231/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Fetching spark://localhost:36231/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp11016370282129254708.tmp
+26/05/19 10:50:37 INFO Utils: /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp11016370282129254708.tmp has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/commons-logging_commons-logging-1.1.3.jar
+26/05/19 10:50:37 INFO Executor: Adding file:/tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/commons-logging_commons-logging-1.1.3.jar to class loader default
+26/05/19 10:50:37 INFO Executor: Fetching spark://localhost:36231/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Fetching spark://localhost:36231/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp14121188182329520884.tmp
+26/05/19 10:50:37 INFO Utils: /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp14121188182329520884.tmp has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.commons_commons-pool2-2.11.1.jar
+26/05/19 10:50:37 INFO Executor: Adding file:/tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.commons_commons-pool2-2.11.1.jar to class loader default
+26/05/19 10:50:37 INFO Executor: Fetching spark://localhost:36231/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Fetching spark://localhost:36231/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp11114398340297574164.tmp
+26/05/19 10:50:37 INFO Utils: /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp11114398340297574164.tmp has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/com.google.code.findbugs_jsr305-3.0.0.jar
+26/05/19 10:50:37 INFO Executor: Adding file:/tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/com.google.code.findbugs_jsr305-3.0.0.jar to class loader default
+26/05/19 10:50:37 INFO Executor: Fetching spark://localhost:36231/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Fetching spark://localhost:36231/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp8929395027704947770.tmp
+26/05/19 10:50:37 INFO Utils: /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp8929395027704947770.tmp has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+26/05/19 10:50:37 INFO Executor: Adding file:/tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to class loader default
+26/05/19 10:50:37 INFO Executor: Fetching spark://localhost:36231/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Fetching spark://localhost:36231/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp11583283681449756326.tmp
+26/05/19 10:50:37 INFO Utils: /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp11583283681449756326.tmp has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.xerial.snappy_snappy-java-1.1.10.3.jar
+26/05/19 10:50:37 INFO Executor: Adding file:/tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.xerial.snappy_snappy-java-1.1.10.3.jar to class loader default
+26/05/19 10:50:37 INFO Executor: Fetching spark://localhost:36231/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Fetching spark://localhost:36231/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp13099751802603673189.tmp
+26/05/19 10:50:37 INFO Utils: /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp13099751802603673189.tmp has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.lz4_lz4-java-1.8.0.jar
+26/05/19 10:50:37 INFO Executor: Adding file:/tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.lz4_lz4-java-1.8.0.jar to class loader default
+26/05/19 10:50:37 INFO Executor: Fetching spark://localhost:36231/jars/org.checkerframework_checker-qual-3.42.0.jar with timestamp 1779162635968
+26/05/19 10:50:37 INFO Utils: Fetching spark://localhost:36231/jars/org.checkerframework_checker-qual-3.42.0.jar to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp16690419982236156082.tmp
+26/05/19 10:50:37 INFO Utils: /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/fetchFileTemp16690419982236156082.tmp has been previously copied to /tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.checkerframework_checker-qual-3.42.0.jar
+26/05/19 10:50:37 INFO Executor: Adding file:/tmp/spark-5beab2c1-874a-4433-94ea-eb8560c448f1/userFiles-24048807-eea1-4a2d-bdd8-e366857ecaf8/org.checkerframework_checker-qual-3.42.0.jar to class loader default
+26/05/19 10:50:37 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 32913.
+26/05/19 10:50:37 INFO NettyBlockTransferService: Server created on localhost:32913
+26/05/19 10:50:37 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/05/19 10:50:37 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, localhost, 32913, None)
+26/05/19 10:50:37 INFO BlockManagerMasterEndpoint: Registering block manager localhost:32913 with 1048.8 MiB RAM, BlockManagerId(driver, localhost, 32913, None)
+26/05/19 10:50:37 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, localhost, 32913, None)
+26/05/19 10:50:37 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, localhost, 32913, None)
+🚀 Khởi động Spark Streaming kết nối tới Kafka (localhost) và HDFS (hdfs://localhost:9820)...
+26/05/19 10:50:40 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+26/05/19 10:50:41 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+26/05/19 10:50:41 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+26/05/19 10:50:41 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+26/05/19 10:50:41 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+📈 Hệ thống đang thu thập dữ liệu...
+26/05/19 10:50:42 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+
+--- Đang xử lý Batch ID: 4 ---
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|symbol|gia_trung_binh    |tong_khoi_luong|gia_cao_nhat|gia_thap_nhat|window_start       |window_end         |
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|VPB   |70062.36813186813 |7803110        |94318.0     |46156.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|FPT   |46232.631868131866|10505870       |62460.0     |30123.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|PLX   |77857.52747252748 |8503630        |93517.0     |62163.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|TCB   |75069.2032967033  |8622480        |87814.0     |62206.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|MWG   |32133.785714285714|6781490        |35765.0     |28422.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|BID   |34776.28021978022 |7868640        |36830.0     |32943.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|VCB   |70391.54945054946 |8827720        |88645.0     |52309.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|LPB   |50059.357142857145|7649660        |78987.0     |21810.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|CTG   |74399.32417582418 |7588990        |81808.0     |66904.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|ACB   |47988.494505494506|8424560        |52824.0     |43277.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|SSI   |65388.46153846154 |8721700        |65978.0     |64786.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|MBB   |50790.769230769234|7676510        |72942.0     |28776.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|HPG   |68274.47802197802 |7924440        |87673.0     |48929.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|PNJ   |51914.543956043955|6297440        |61282.0     |42942.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|NVL   |69484.43956043955 |6021750        |70993.0     |68256.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|GAS   |60079.87912087912 |9267520        |90723.0     |30079.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|MSN   |59692.604395604394|6310450        |78812.0     |41001.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|VIC   |33224.692307692305|7108740        |42597.0     |23893.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|STB   |47611.45054945055 |9943460        |49730.0     |45282.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
+|VJC   |59044.75274725275 |7014820        |70337.0     |47863.0      |2026-05-19 10:50:00|2026-05-19 10:51:00|
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+only showing top 20 rows
+
+26/05/19 10:54:02 WARN HDFSBackedStateStoreProvider: The state for version 4 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 10:54:03 WARN HDFSBackedStateStoreProvider: The state for version 4 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 10:54:03 WARN HDFSBackedStateStoreProvider: The state for version 4 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+🔥 CẢNH BÁO: Phát hiện 22 giao dịch bất thường tại Batch 4!
+26/05/19 10:54:04 WARN HDFSBackedStateStoreProvider: The state for version 4 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
++-------------------+------+----------+------------+-----------+-----------------+
+|window_start       |symbol|alert_type|value_before|value_after|change_percentage|
++-------------------+------+----------+------------+-----------+-----------------+
+|2026-05-19 10:50:00|VPB   |PRICE_JUMP|46156.0     |94318.0    |104.35           |
+|2026-05-19 10:50:00|FPT   |PRICE_JUMP|30123.0     |62460.0    |107.35           |
+|2026-05-19 10:50:00|PLX   |PRICE_JUMP|62163.0     |93517.0    |50.44            |
+|2026-05-19 10:50:00|TCB   |PRICE_JUMP|62206.0     |87814.0    |41.17            |
+|2026-05-19 10:50:00|MWG   |PRICE_JUMP|28422.0     |35765.0    |25.84            |
+|2026-05-19 10:50:00|BID   |PRICE_JUMP|32943.0     |36830.0    |11.8             |
+|2026-05-19 10:50:00|VCB   |PRICE_JUMP|52309.0     |88645.0    |69.46            |
+|2026-05-19 10:50:00|LPB   |PRICE_JUMP|21810.0     |78987.0    |262.16           |
+|2026-05-19 10:50:00|CTG   |PRICE_JUMP|66904.0     |81808.0    |22.28            |
+|2026-05-19 10:50:00|ACB   |PRICE_JUMP|43277.0     |52824.0    |22.06            |
+|2026-05-19 10:50:00|MBB   |PRICE_JUMP|28776.0     |72942.0    |153.48           |
+|2026-05-19 10:50:00|HPG   |PRICE_JUMP|48929.0     |87673.0    |79.18            |
+|2026-05-19 10:50:00|PNJ   |PRICE_JUMP|42942.0     |61282.0    |42.71            |
+|2026-05-19 10:50:00|GAS   |PRICE_JUMP|30079.0     |90723.0    |201.62           |
+|2026-05-19 10:50:00|MSN   |PRICE_JUMP|41001.0     |78812.0    |92.22            |
+|2026-05-19 10:50:00|VIC   |PRICE_JUMP|23893.0     |42597.0    |78.28            |
+|2026-05-19 10:50:00|STB   |PRICE_JUMP|45282.0     |49730.0    |9.82             |
+|2026-05-19 10:50:00|VJC   |PRICE_JUMP|47863.0     |70337.0    |46.95            |
+|2026-05-19 10:50:00|VHM   |PRICE_JUMP|32491.0     |67752.0    |108.53           |
+|2026-05-19 10:50:00|VCK   |PRICE_JUMP|52873.0     |75495.0    |42.79            |
++-------------------+------+----------+------------+-----------+-----------------+
+only showing top 20 rows
+
+26/05/19 10:54:04 WARN HDFSBackedStateStoreProvider: The state for version 4 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+
+--- Đang xử lý Batch ID: 5 ---
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|symbol|gia_trung_binh    |tong_khoi_luong|gia_cao_nhat|gia_thap_nhat|window_start       |window_end         |
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|TCB   |75472.09333333334 |24320140       |89129.0     |62265.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|ACB   |47557.403333333335|25813940       |52334.0     |42638.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|SAB   |58004.17333333333 |25940020       |67528.0     |48706.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|SSI   |65548.68666666666 |32573820       |66811.0     |64155.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|PNJ   |52376.84166666667 |29879450       |63082.0     |42244.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|PLX   |77093.15166666667 |21981570       |94449.0     |60759.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|VPB   |70336.80833333333 |25638730       |95356.0     |45921.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|FPT   |45337.035         |24672840       |61791.0     |29796.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|LPB   |50813.78          |28085470       |80967.0     |21552.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|MSN   |59647.50833333333 |21150480       |79804.0     |40537.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|CTG   |75522.59          |27505050       |85025.0     |66655.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|VHM   |49680.823333333334|26984460       |68261.0     |31578.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|HPG   |68236.2           |25882570       |88949.0     |47131.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|GAS   |59956.246666666666|22950140       |90370.0     |29999.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|VCB   |70584.86833333333 |27168210       |88894.0     |52500.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|VIC   |33210.51833333333 |26795470       |42395.0     |24323.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|MBB   |50937.83          |30776660       |73625.0     |28887.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|VCK   |64352.69666666666 |26422050       |77132.0     |51836.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|NVL   |69296.21166666667 |27592300       |71256.0     |67315.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
+|VJC   |58867.073333333334|25441730       |69596.0     |47566.0      |2026-05-19 10:51:00|2026-05-19 10:52:00|
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+only showing top 20 rows
+
+26/05/19 10:55:00 WARN HDFSBackedStateStoreProvider: The state for version 5 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 10:55:01 WARN HDFSBackedStateStoreProvider: The state for version 5 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 10:55:01 WARN HDFSBackedStateStoreProvider: The state for version 5 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+🔥 CẢNH BÁO: Phát hiện 42 giao dịch bất thường tại Batch 5!
+26/05/19 10:55:01 WARN HDFSBackedStateStoreProvider: The state for version 5 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
++-------------------+------+----------+------------+-----------+-----------------+
+|window_start       |symbol|alert_type|value_before|value_after|change_percentage|
++-------------------+------+----------+------------+-----------+-----------------+
+|2026-05-19 10:51:00|TCB   |PRICE_JUMP|62265.0     |89129.0    |43.14            |
+|2026-05-19 10:51:00|ACB   |PRICE_JUMP|42638.0     |52334.0    |22.74            |
+|2026-05-19 10:51:00|SAB   |PRICE_JUMP|48706.0     |67528.0    |38.64            |
+|2026-05-19 10:51:00|PNJ   |PRICE_JUMP|42244.0     |63082.0    |49.33            |
+|2026-05-19 10:51:00|PLX   |PRICE_JUMP|60759.0     |94449.0    |55.45            |
+|2026-05-19 10:51:00|VPB   |PRICE_JUMP|45921.0     |95356.0    |107.65           |
+|2026-05-19 10:51:00|FPT   |PRICE_JUMP|29796.0     |61791.0    |107.38           |
+|2026-05-19 10:51:00|LPB   |PRICE_JUMP|21552.0     |80967.0    |275.68           |
+|2026-05-19 10:51:00|MSN   |PRICE_JUMP|40537.0     |79804.0    |96.87            |
+|2026-05-19 10:51:00|CTG   |PRICE_JUMP|66655.0     |85025.0    |27.56            |
+|2026-05-19 10:51:00|VHM   |PRICE_JUMP|31578.0     |68261.0    |116.17           |
+|2026-05-19 10:51:00|HPG   |PRICE_JUMP|47131.0     |88949.0    |88.73            |
+|2026-05-19 10:51:00|GAS   |PRICE_JUMP|29999.0     |90370.0    |201.24           |
+|2026-05-19 10:51:00|VCB   |PRICE_JUMP|52500.0     |88894.0    |69.32            |
+|2026-05-19 10:51:00|VIC   |PRICE_JUMP|24323.0     |42395.0    |74.3             |
+|2026-05-19 10:51:00|MBB   |PRICE_JUMP|28887.0     |73625.0    |154.87           |
+|2026-05-19 10:51:00|VCK   |PRICE_JUMP|51836.0     |77132.0    |48.8             |
+|2026-05-19 10:51:00|NVL   |PRICE_JUMP|67315.0     |71256.0    |5.85             |
+|2026-05-19 10:51:00|VJC   |PRICE_JUMP|47566.0     |69596.0    |46.31            |
+|2026-05-19 10:51:00|VNM   |PRICE_JUMP|31325.0     |80386.0    |156.62           |
++-------------------+------+----------+------------+-----------+-----------------+
+only showing top 20 rows
+
+26/05/19 10:55:02 WARN HDFSBackedStateStoreProvider: The state for version 5 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+
+--- Đang xử lý Batch ID: 6 ---
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|symbol|gia_trung_binh    |tong_khoi_luong|gia_cao_nhat|gia_thap_nhat|window_start       |window_end         |
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|VPB   |71050.79333333333 |25738520       |96010.0     |46830.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|NVL   |69603.85333333333 |28722110       |71229.0     |68170.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|PNJ   |52619.46333333333 |27980900       |63481.0     |41928.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|PLX   |76424.73666666666 |29437740       |93197.0     |59608.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|VCB   |70350.425         |25142210       |89005.0     |51740.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|VJC   |59172.175         |22474200       |70087.0     |48803.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|VIC   |32922.276666666665|25382960       |41682.0     |24276.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|SAB   |58536.47666666667 |28302010       |68322.0     |48293.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|SSI   |65634.235         |23424830       |67755.0     |63452.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|VCK   |64298.22          |24672980       |76648.0     |52927.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|GAS   |59553.0           |29315430       |90267.0     |30068.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|STB   |47363.36833333333 |24258610       |49806.0     |45059.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|MSN   |60616.653333333335|27900380       |81043.0     |40713.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|MBB   |50944.85833333333 |25873510       |73824.0     |28839.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|LPB   |51543.863333333335|26492180       |82012.0     |21535.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|TCB   |76718.36666666667 |25414840       |90500.0     |63476.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|FPT   |45143.50166666666 |26163090       |59600.0     |30511.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|VHM   |50236.53          |26327530       |69130.0     |31188.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|ACB   |47041.71833333333 |25323470       |51814.0     |41952.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
+|MWG   |31427.906666666666|26826140       |35002.0     |28430.0      |2026-05-19 10:52:00|2026-05-19 10:53:00|
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+only showing top 20 rows
+
+26/05/19 10:56:00 WARN HDFSBackedStateStoreProvider: The state for version 6 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 10:56:01 WARN HDFSBackedStateStoreProvider: The state for version 6 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 10:56:01 WARN HDFSBackedStateStoreProvider: The state for version 6 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+🔥 CẢNH BÁO: Phát hiện 23 giao dịch bất thường tại Batch 6!
+26/05/19 10:56:01 WARN HDFSBackedStateStoreProvider: The state for version 6 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
++-------------------+------+----------+------------+-----------+-----------------+
+|window_start       |symbol|alert_type|value_before|value_after|change_percentage|
++-------------------+------+----------+------------+-----------+-----------------+
+|2026-05-19 10:52:00|VPB   |PRICE_JUMP|46830.0     |96010.0    |105.02           |
+|2026-05-19 10:52:00|PNJ   |PRICE_JUMP|41928.0     |63481.0    |51.4             |
+|2026-05-19 10:52:00|PLX   |PRICE_JUMP|59608.0     |93197.0    |56.35            |
+|2026-05-19 10:52:00|VCB   |PRICE_JUMP|51740.0     |89005.0    |72.02            |
+|2026-05-19 10:52:00|VJC   |PRICE_JUMP|48803.0     |70087.0    |43.61            |
+|2026-05-19 10:52:00|VIC   |PRICE_JUMP|24276.0     |41682.0    |71.7             |
+|2026-05-19 10:52:00|SAB   |PRICE_JUMP|48293.0     |68322.0    |41.47            |
+|2026-05-19 10:52:00|SSI   |PRICE_JUMP|63452.0     |67755.0    |6.78             |
+|2026-05-19 10:52:00|VCK   |PRICE_JUMP|52927.0     |76648.0    |44.82            |
+|2026-05-19 10:52:00|GAS   |PRICE_JUMP|30068.0     |90267.0    |200.21           |
+|2026-05-19 10:52:00|STB   |PRICE_JUMP|45059.0     |49806.0    |10.54            |
+|2026-05-19 10:52:00|MSN   |PRICE_JUMP|40713.0     |81043.0    |99.06            |
+|2026-05-19 10:52:00|MBB   |PRICE_JUMP|28839.0     |73824.0    |155.99           |
+|2026-05-19 10:52:00|LPB   |PRICE_JUMP|21535.0     |82012.0    |280.83           |
+|2026-05-19 10:52:00|TCB   |PRICE_JUMP|63476.0     |90500.0    |42.57            |
+|2026-05-19 10:52:00|FPT   |PRICE_JUMP|30511.0     |59600.0    |95.34            |
+|2026-05-19 10:52:00|VHM   |PRICE_JUMP|31188.0     |69130.0    |121.66           |
+|2026-05-19 10:52:00|ACB   |PRICE_JUMP|41952.0     |51814.0    |23.51            |
+|2026-05-19 10:52:00|MWG   |PRICE_JUMP|28430.0     |35002.0    |23.12            |
+|2026-05-19 10:52:00|VNM   |PRICE_JUMP|31063.0     |80614.0    |159.52           |
++-------------------+------+----------+------------+-----------+-----------------+
+only showing top 20 rows
+
+26/05/19 10:56:01 WARN HDFSBackedStateStoreProvider: The state for version 6 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+
+--- Đang xử lý Batch ID: 7 ---
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|symbol|gia_trung_binh    |tong_khoi_luong|gia_cao_nhat|gia_thap_nhat|window_start       |window_end         |
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|PLX   |76726.675         |28083770       |94087.0     |59457.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|PNJ   |52792.65          |25364930       |63088.0     |42588.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|VCB   |71676.02          |27709640       |90919.0     |53133.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|VCK   |64390.9           |29642150       |76222.0     |53146.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|TCB   |75593.775         |29347340       |87840.0     |63627.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|MWG   |31065.943333333333|25421820       |34594.0     |27638.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|VHM   |50040.08666666667 |28693190       |69639.0     |30825.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|VJC   |58964.59166666667 |23378980       |70337.0     |47678.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|STB   |48135.29833333333 |27664170       |50427.0     |45236.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|ACB   |46789.738333333335|26098110       |51637.0     |41656.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|SSI   |66171.35666666667 |23293300       |70551.0     |62946.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|SAB   |58715.806666666664|24898420       |68456.0     |49564.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|MSN   |60243.36833333333 |26760150       |80323.0     |40822.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|GAS   |60700.36          |25494130       |93118.0     |29603.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|NVL   |69700.16833333333 |28679390       |72105.0     |67391.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|MBB   |50723.073333333334|27480180       |73459.0     |28354.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|VNM   |56021.43666666667 |30889830       |80585.0     |31648.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|CTG   |74939.16833333333 |29790970       |83722.0     |66915.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|VIC   |32328.06166666667 |30409680       |41506.0     |23780.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
+|VPB   |71303.12          |23371020       |96915.0     |45984.0      |2026-05-19 10:53:00|2026-05-19 10:54:00|
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+only showing top 20 rows
+
+26/05/19 10:57:00 WARN HDFSBackedStateStoreProvider: The state for version 7 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 10:57:00 WARN HDFSBackedStateStoreProvider: The state for version 7 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 10:57:01 WARN HDFSBackedStateStoreProvider: The state for version 7 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+🔥 CẢNH BÁO: Phát hiện 24 giao dịch bất thường tại Batch 7!
+26/05/19 10:57:01 WARN HDFSBackedStateStoreProvider: The state for version 7 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
++-------------------+------+----------+------------+-----------+-----------------+
+|window_start       |symbol|alert_type|value_before|value_after|change_percentage|
++-------------------+------+----------+------------+-----------+-----------------+
+|2026-05-19 10:53:00|PLX   |PRICE_JUMP|59457.0     |94087.0    |58.24            |
+|2026-05-19 10:53:00|PNJ   |PRICE_JUMP|42588.0     |63088.0    |48.14            |
+|2026-05-19 10:53:00|VCB   |PRICE_JUMP|53133.0     |90919.0    |71.12            |
+|2026-05-19 10:53:00|VCK   |PRICE_JUMP|53146.0     |76222.0    |43.42            |
+|2026-05-19 10:53:00|TCB   |PRICE_JUMP|63627.0     |87840.0    |38.05            |
+|2026-05-19 10:53:00|MWG   |PRICE_JUMP|27638.0     |34594.0    |25.17            |
+|2026-05-19 10:53:00|VHM   |PRICE_JUMP|30825.0     |69639.0    |125.92           |
+|2026-05-19 10:53:00|VJC   |PRICE_JUMP|47678.0     |70337.0    |47.53            |
+|2026-05-19 10:53:00|STB   |PRICE_JUMP|45236.0     |50427.0    |11.48            |
+|2026-05-19 10:53:00|ACB   |PRICE_JUMP|41656.0     |51637.0    |23.96            |
+|2026-05-19 10:53:00|SSI   |PRICE_JUMP|62946.0     |70551.0    |12.08            |
+|2026-05-19 10:53:00|SAB   |PRICE_JUMP|49564.0     |68456.0    |38.12            |
+|2026-05-19 10:53:00|MSN   |PRICE_JUMP|40822.0     |80323.0    |96.76            |
+|2026-05-19 10:53:00|GAS   |PRICE_JUMP|29603.0     |93118.0    |214.56           |
+|2026-05-19 10:53:00|NVL   |PRICE_JUMP|67391.0     |72105.0    |6.99             |
+|2026-05-19 10:53:00|MBB   |PRICE_JUMP|28354.0     |73459.0    |159.08           |
+|2026-05-19 10:53:00|VNM   |PRICE_JUMP|31648.0     |80585.0    |154.63           |
+|2026-05-19 10:53:00|CTG   |PRICE_JUMP|66915.0     |83722.0    |25.12            |
+|2026-05-19 10:53:00|VIC   |PRICE_JUMP|23780.0     |41506.0    |74.54            |
+|2026-05-19 10:53:00|VPB   |PRICE_JUMP|45984.0     |96915.0    |110.76           |
++-------------------+------+----------+------------+-----------+-----------------+
+only showing top 20 rows
+
+26/05/19 10:57:01 WARN HDFSBackedStateStoreProvider: The state for version 7 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+
+--- Đang xử lý Batch ID: 8 ---
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|symbol|gia_trung_binh    |tong_khoi_luong|gia_cao_nhat|gia_thap_nhat|window_start       |window_end         |
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|CTG   |75812.33666666667 |25977870       |84567.0     |67667.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|GAS   |61466.05333333334 |20152570       |94034.0     |29845.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|SSI   |66500.27666666667 |26249270       |70984.0     |62152.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|MBB   |50617.47          |26103980       |73636.0     |28335.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|TCB   |76393.865         |25101860       |89604.0     |63688.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|HPG   |67123.85166666667 |25665570       |90264.0     |44978.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|VIC   |32229.711666666666|26125360       |41177.0     |23800.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|LPB   |51831.17333333333 |24640550       |83985.0     |20843.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|VCB   |71353.225         |25388650       |89968.0     |53129.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|VPB   |70743.15          |30799140       |96984.0     |45421.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|VJC   |58561.308333333334|25229860       |69997.0     |46902.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|MWG   |31141.801666666666|25346750       |34508.0     |27715.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|VCK   |64502.595         |25358380       |77243.0     |51567.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|PLX   |77534.82166666667 |28798500       |95116.0     |60476.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|PNJ   |52916.081666666665|28767910       |63202.0     |43144.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|SAB   |59109.41333333333 |27072470       |68613.0     |49722.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|STB   |48247.91333333333 |25328670       |51017.0     |45241.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|MSN   |60609.208333333336|24452430       |79902.0     |41514.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|VHM   |49664.723333333335|22230440       |69877.0     |30559.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
+|BID   |34787.41333333333 |26312450       |36990.0     |32761.0      |2026-05-19 10:54:00|2026-05-19 10:55:00|
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+only showing top 20 rows
+
+26/05/19 10:58:00 WARN HDFSBackedStateStoreProvider: The state for version 8 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 10:58:00 WARN HDFSBackedStateStoreProvider: The state for version 8 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 10:58:01 WARN HDFSBackedStateStoreProvider: The state for version 8 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+🔥 CẢNH BÁO: Phát hiện 24 giao dịch bất thường tại Batch 8!
+26/05/19 10:58:01 WARN HDFSBackedStateStoreProvider: The state for version 8 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
++-------------------+------+----------+------------+-----------+-----------------+
+|window_start       |symbol|alert_type|value_before|value_after|change_percentage|
++-------------------+------+----------+------------+-----------+-----------------+
+|2026-05-19 10:54:00|CTG   |PRICE_JUMP|67667.0     |84567.0    |24.98            |
+|2026-05-19 10:54:00|GAS   |PRICE_JUMP|29845.0     |94034.0    |215.07           |
+|2026-05-19 10:54:00|SSI   |PRICE_JUMP|62152.0     |70984.0    |14.21            |
+|2026-05-19 10:54:00|MBB   |PRICE_JUMP|28335.0     |73636.0    |159.88           |
+|2026-05-19 10:54:00|TCB   |PRICE_JUMP|63688.0     |89604.0    |40.69            |
+|2026-05-19 10:54:00|HPG   |PRICE_JUMP|44978.0     |90264.0    |100.68           |
+|2026-05-19 10:54:00|VIC   |PRICE_JUMP|23800.0     |41177.0    |73.01            |
+|2026-05-19 10:54:00|LPB   |PRICE_JUMP|20843.0     |83985.0    |302.94           |
+|2026-05-19 10:54:00|VCB   |PRICE_JUMP|53129.0     |89968.0    |69.34            |
+|2026-05-19 10:54:00|VPB   |PRICE_JUMP|45421.0     |96984.0    |113.52           |
+|2026-05-19 10:54:00|VJC   |PRICE_JUMP|46902.0     |69997.0    |49.24            |
+|2026-05-19 10:54:00|MWG   |PRICE_JUMP|27715.0     |34508.0    |24.51            |
+|2026-05-19 10:54:00|VCK   |PRICE_JUMP|51567.0     |77243.0    |49.79            |
+|2026-05-19 10:54:00|PLX   |PRICE_JUMP|60476.0     |95116.0    |57.28            |
+|2026-05-19 10:54:00|PNJ   |PRICE_JUMP|43144.0     |63202.0    |46.49            |
+|2026-05-19 10:54:00|SAB   |PRICE_JUMP|49722.0     |68613.0    |37.99            |
+|2026-05-19 10:54:00|STB   |PRICE_JUMP|45241.0     |51017.0    |12.77            |
+|2026-05-19 10:54:00|MSN   |PRICE_JUMP|41514.0     |79902.0    |92.47            |
+|2026-05-19 10:54:00|VHM   |PRICE_JUMP|30559.0     |69877.0    |128.66           |
+|2026-05-19 10:54:00|BID   |PRICE_JUMP|32761.0     |36990.0    |12.91            |
++-------------------+------+----------+------------+-----------+-----------------+
+only showing top 20 rows
+
+26/05/19 10:58:01 WARN HDFSBackedStateStoreProvider: The state for version 8 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+
+--- Đang xử lý Batch ID: 9 ---
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|symbol|gia_trung_binh    |tong_khoi_luong|gia_cao_nhat|gia_thap_nhat|window_start       |window_end         |
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|PLX   |77407.41166666667 |25662290       |95840.0     |59707.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|ACB   |45843.621666666666|24205530       |50769.0     |41133.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|VHM   |50211.15833333333 |24337370       |69935.0     |30467.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|NVL   |69168.03166666666 |26470450       |71044.0     |67232.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|MBB   |50553.208333333336|24971420       |73069.0     |28373.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|HPG   |67423.23166666667 |23355220       |90488.0     |44654.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|PNJ   |52091.99333333333 |27613670       |61671.0     |42949.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|VIC   |32553.295         |22647610       |41000.0     |23948.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|MSN   |60890.87333333334 |29502340       |81187.0     |41885.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|VJC   |58672.306666666664|22112880       |69560.0     |47963.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|STB   |47745.01833333333 |25931470       |50855.0     |44587.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|VNM   |56898.681666666664|23106450       |81892.0     |32091.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|BID   |34984.21166666667 |23241400       |37068.0     |32776.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|FPT   |44984.84166666667 |26222970       |58005.0     |32474.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|CTG   |74645.75          |23010820       |82434.0     |67185.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|MWG   |31076.133333333335|28596300       |34493.0     |27721.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|VCK   |64426.57833333333 |30875830       |77318.0     |51436.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|SSI   |66824.08666666667 |27119840       |70680.0     |62819.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|VCB   |71788.07333333333 |25246240       |91063.0     |53204.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
+|VPB   |70993.16166666667 |27971150       |97311.0     |45566.0      |2026-05-19 10:55:00|2026-05-19 10:56:00|
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+only showing top 20 rows
+
+26/05/19 10:59:00 WARN HDFSBackedStateStoreProvider: The state for version 9 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 10:59:00 WARN HDFSBackedStateStoreProvider: The state for version 9 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 10:59:01 WARN HDFSBackedStateStoreProvider: The state for version 9 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+🔥 CẢNH BÁO: Phát hiện 24 giao dịch bất thường tại Batch 9!
+26/05/19 10:59:01 WARN HDFSBackedStateStoreProvider: The state for version 9 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
++-------------------+------+----------+------------+-----------+-----------------+
+|window_start       |symbol|alert_type|value_before|value_after|change_percentage|
++-------------------+------+----------+------------+-----------+-----------------+
+|2026-05-19 10:55:00|PLX   |PRICE_JUMP|59707.0     |95840.0    |60.52            |
+|2026-05-19 10:55:00|ACB   |PRICE_JUMP|41133.0     |50769.0    |23.43            |
+|2026-05-19 10:55:00|VHM   |PRICE_JUMP|30467.0     |69935.0    |129.54           |
+|2026-05-19 10:55:00|NVL   |PRICE_JUMP|67232.0     |71044.0    |5.67             |
+|2026-05-19 10:55:00|MBB   |PRICE_JUMP|28373.0     |73069.0    |157.53           |
+|2026-05-19 10:55:00|HPG   |PRICE_JUMP|44654.0     |90488.0    |102.64           |
+|2026-05-19 10:55:00|PNJ   |PRICE_JUMP|42949.0     |61671.0    |43.59            |
+|2026-05-19 10:55:00|VIC   |PRICE_JUMP|23948.0     |41000.0    |71.2             |
+|2026-05-19 10:55:00|MSN   |PRICE_JUMP|41885.0     |81187.0    |93.83            |
+|2026-05-19 10:55:00|VJC   |PRICE_JUMP|47963.0     |69560.0    |45.03            |
+|2026-05-19 10:55:00|STB   |PRICE_JUMP|44587.0     |50855.0    |14.06            |
+|2026-05-19 10:55:00|VNM   |PRICE_JUMP|32091.0     |81892.0    |155.19           |
+|2026-05-19 10:55:00|BID   |PRICE_JUMP|32776.0     |37068.0    |13.09            |
+|2026-05-19 10:55:00|FPT   |PRICE_JUMP|32474.0     |58005.0    |78.62            |
+|2026-05-19 10:55:00|CTG   |PRICE_JUMP|67185.0     |82434.0    |22.7             |
+|2026-05-19 10:55:00|MWG   |PRICE_JUMP|27721.0     |34493.0    |24.43            |
+|2026-05-19 10:55:00|VCK   |PRICE_JUMP|51436.0     |77318.0    |50.32            |
+|2026-05-19 10:55:00|SSI   |PRICE_JUMP|62819.0     |70680.0    |12.51            |
+|2026-05-19 10:55:00|VCB   |PRICE_JUMP|53204.0     |91063.0    |71.16            |
+|2026-05-19 10:55:00|VPB   |PRICE_JUMP|45566.0     |97311.0    |113.56           |
++-------------------+------+----------+------------+-----------+-----------------+
+only showing top 20 rows
+
+26/05/19 10:59:01 WARN HDFSBackedStateStoreProvider: The state for version 9 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+
+--- Đang xử lý Batch ID: 10 ---
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|symbol|gia_trung_binh    |tong_khoi_luong|gia_cao_nhat|gia_thap_nhat|window_start       |window_end         |
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|VJC   |58870.22666666667 |23661250       |69666.0     |48205.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|SSI   |66621.915         |24983110       |70637.0     |63185.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|MSN   |61274.21          |27567570       |81306.0     |42180.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|VCK   |63838.941666666666|27549200       |76727.0     |50552.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|ACB   |45699.95          |25341080       |50728.0     |40816.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|HPG   |66899.345         |26968520       |89971.0     |44470.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|PNJ   |52129.765         |24889070       |60746.0     |43554.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|LPB   |52878.315         |25001690       |85828.0     |20974.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|SAB   |58428.875         |26443730       |68011.0     |48891.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|MBB   |50555.48166666667 |25842270       |73307.0     |28087.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|VHM   |49603.335         |27081760       |69206.0     |30961.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|FPT   |45444.62666666666 |26097400       |58468.0     |32357.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|PLX   |76872.86          |26292690       |96445.0     |58776.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|STB   |47639.75666666667 |24341090       |50510.0     |44712.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|VPB   |70926.69666666667 |30131710       |97083.0     |45263.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|MWG   |30865.048333333332|27093960       |34338.0     |27598.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|GAS   |62842.925         |23253400       |98230.0     |28658.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|BID   |35431.45          |23019620       |38025.0     |32816.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|VCB   |72302.12666666666 |24151400       |91185.0     |53932.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
+|VNM   |57093.68666666667 |26636270       |82101.0     |32464.0      |2026-05-19 10:56:00|2026-05-19 10:57:00|
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+only showing top 20 rows
+
+26/05/19 11:00:00 WARN HDFSBackedStateStoreProvider: The state for version 10 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 11:00:00 WARN HDFSBackedStateStoreProvider: The state for version 10 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 11:00:01 WARN HDFSBackedStateStoreProvider: The state for version 10 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+🔥 CẢNH BÁO: Phát hiện 23 giao dịch bất thường tại Batch 10!
+26/05/19 11:00:01 WARN HDFSBackedStateStoreProvider: The state for version 10 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
++-------------------+------+----------+------------+-----------+-----------------+
+|window_start       |symbol|alert_type|value_before|value_after|change_percentage|
++-------------------+------+----------+------------+-----------+-----------------+
+|2026-05-19 10:56:00|VJC   |PRICE_JUMP|48205.0     |69666.0    |44.52            |
+|2026-05-19 10:56:00|SSI   |PRICE_JUMP|63185.0     |70637.0    |11.79            |
+|2026-05-19 10:56:00|MSN   |PRICE_JUMP|42180.0     |81306.0    |92.76            |
+|2026-05-19 10:56:00|VCK   |PRICE_JUMP|50552.0     |76727.0    |51.78            |
+|2026-05-19 10:56:00|ACB   |PRICE_JUMP|40816.0     |50728.0    |24.28            |
+|2026-05-19 10:56:00|HPG   |PRICE_JUMP|44470.0     |89971.0    |102.32           |
+|2026-05-19 10:56:00|PNJ   |PRICE_JUMP|43554.0     |60746.0    |39.47            |
+|2026-05-19 10:56:00|LPB   |PRICE_JUMP|20974.0     |85828.0    |309.21           |
+|2026-05-19 10:56:00|SAB   |PRICE_JUMP|48891.0     |68011.0    |39.11            |
+|2026-05-19 10:56:00|MBB   |PRICE_JUMP|28087.0     |73307.0    |161.0            |
+|2026-05-19 10:56:00|VHM   |PRICE_JUMP|30961.0     |69206.0    |123.53           |
+|2026-05-19 10:56:00|FPT   |PRICE_JUMP|32357.0     |58468.0    |80.7             |
+|2026-05-19 10:56:00|PLX   |PRICE_JUMP|58776.0     |96445.0    |64.09            |
+|2026-05-19 10:56:00|STB   |PRICE_JUMP|44712.0     |50510.0    |12.97            |
+|2026-05-19 10:56:00|VPB   |PRICE_JUMP|45263.0     |97083.0    |114.49           |
+|2026-05-19 10:56:00|MWG   |PRICE_JUMP|27598.0     |34338.0    |24.42            |
+|2026-05-19 10:56:00|GAS   |PRICE_JUMP|28658.0     |98230.0    |242.77           |
+|2026-05-19 10:56:00|BID   |PRICE_JUMP|32816.0     |38025.0    |15.87            |
+|2026-05-19 10:56:00|VCB   |PRICE_JUMP|53932.0     |91185.0    |69.07            |
+|2026-05-19 10:56:00|VNM   |PRICE_JUMP|32464.0     |82101.0    |152.9            |
++-------------------+------+----------+------------+-----------+-----------------+
+only showing top 20 rows
+
+26/05/19 11:00:01 WARN HDFSBackedStateStoreProvider: The state for version 10 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+
+--- Đang xử lý Batch ID: 11 ---
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|symbol|gia_trung_binh    |tong_khoi_luong|gia_cao_nhat|gia_thap_nhat|window_start       |window_end         |
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|MSN   |63597.51833333333 |26560400       |84352.0     |43488.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|SAB   |58033.465         |26726920       |67598.0     |48903.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|GAS   |63055.505         |30435200       |98011.0     |29055.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|LPB   |52482.2           |26377420       |84099.0     |21570.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|VIC   |31404.756666666668|24036620       |39016.0     |23947.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|FPT   |46503.20333333333 |27233950       |60341.0     |32500.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|PLX   |75646.53          |25744460       |92816.0     |57793.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|ACB   |45347.28833333333 |25699340       |49869.0     |41034.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|MBB   |51229.16          |23970720       |74928.0     |28094.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|VCB   |71893.13166666667 |28986610       |90366.0     |53991.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|VCK   |62398.36          |27881830       |75708.0     |49393.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|VPB   |70874.58666666667 |26842480       |97132.0     |44944.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|TCB   |74642.03333333334 |24307730       |88498.0     |61994.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|BID   |35537.815         |27002860       |38673.0     |32627.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|VNM   |56746.565         |26197500       |81877.0     |32538.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|VHM   |50053.93833333333 |26147690       |68287.0     |31934.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|HPG   |66107.83333333333 |27545940       |88666.0     |44542.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|MWG   |30825.17          |27173660       |34163.0     |27594.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|STB   |47848.153333333335|28255130       |50374.0     |45353.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
+|PNJ   |51901.12333333334 |24170450       |60103.0     |43884.0      |2026-05-19 10:57:00|2026-05-19 10:58:00|
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+only showing top 20 rows
+
+26/05/19 11:01:00 WARN HDFSBackedStateStoreProvider: The state for version 11 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 11:01:00 WARN HDFSBackedStateStoreProvider: The state for version 11 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 11:01:01 WARN HDFSBackedStateStoreProvider: The state for version 11 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+🔥 CẢNH BÁO: Phát hiện 23 giao dịch bất thường tại Batch 11!
+26/05/19 11:01:01 WARN HDFSBackedStateStoreProvider: The state for version 11 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
++-------------------+------+----------+------------+-----------+-----------------+
+|window_start       |symbol|alert_type|value_before|value_after|change_percentage|
++-------------------+------+----------+------------+-----------+-----------------+
+|2026-05-19 10:57:00|MSN   |PRICE_JUMP|43488.0     |84352.0    |93.97            |
+|2026-05-19 10:57:00|SAB   |PRICE_JUMP|48903.0     |67598.0    |38.23            |
+|2026-05-19 10:57:00|GAS   |PRICE_JUMP|29055.0     |98011.0    |237.33           |
+|2026-05-19 10:57:00|LPB   |PRICE_JUMP|21570.0     |84099.0    |289.89           |
+|2026-05-19 10:57:00|VIC   |PRICE_JUMP|23947.0     |39016.0    |62.93            |
+|2026-05-19 10:57:00|FPT   |PRICE_JUMP|32500.0     |60341.0    |85.66            |
+|2026-05-19 10:57:00|PLX   |PRICE_JUMP|57793.0     |92816.0    |60.6             |
+|2026-05-19 10:57:00|ACB   |PRICE_JUMP|41034.0     |49869.0    |21.53            |
+|2026-05-19 10:57:00|MBB   |PRICE_JUMP|28094.0     |74928.0    |166.7            |
+|2026-05-19 10:57:00|VCB   |PRICE_JUMP|53991.0     |90366.0    |67.37            |
+|2026-05-19 10:57:00|VCK   |PRICE_JUMP|49393.0     |75708.0    |53.28            |
+|2026-05-19 10:57:00|VPB   |PRICE_JUMP|44944.0     |97132.0    |116.12           |
+|2026-05-19 10:57:00|TCB   |PRICE_JUMP|61994.0     |88498.0    |42.75            |
+|2026-05-19 10:57:00|BID   |PRICE_JUMP|32627.0     |38673.0    |18.53            |
+|2026-05-19 10:57:00|VNM   |PRICE_JUMP|32538.0     |81877.0    |151.64           |
+|2026-05-19 10:57:00|VHM   |PRICE_JUMP|31934.0     |68287.0    |113.84           |
+|2026-05-19 10:57:00|HPG   |PRICE_JUMP|44542.0     |88666.0    |99.06            |
+|2026-05-19 10:57:00|MWG   |PRICE_JUMP|27594.0     |34163.0    |23.81            |
+|2026-05-19 10:57:00|STB   |PRICE_JUMP|45353.0     |50374.0    |11.07            |
+|2026-05-19 10:57:00|PNJ   |PRICE_JUMP|43884.0     |60103.0    |36.96            |
++-------------------+------+----------+------------+-----------+-----------------+
+only showing top 20 rows
+
+26/05/19 11:01:01 WARN HDFSBackedStateStoreProvider: The state for version 11 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+
+--- Đang xử lý Batch ID: 12 ---
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|symbol|gia_trung_binh    |tong_khoi_luong|gia_cao_nhat|gia_thap_nhat|window_start       |window_end         |
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|ACB   |45439.081666666665|24601980       |49711.0     |41039.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|MSN   |64340.24833333334 |26594490       |84568.0     |44486.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|VHM   |49693.378333333334|27291040       |68184.0     |31607.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|MWG   |30919.051666666666|29156690       |34019.0     |28082.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|VIC   |31401.971666666668|24109600       |39196.0     |23425.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|STB   |48330.865         |25016650       |51031.0     |45749.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|NVL   |72446.45166666666 |25879220       |73860.0     |70982.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|PLX   |75051.44333333333 |26304670       |93382.0     |56831.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|SAB   |57445.87333333334 |24310310       |67520.0     |47140.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|SSI   |66572.66333333333 |26703760       |70630.0     |63197.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|MBB   |50725.045         |27070940       |73735.0     |28062.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|VJC   |58291.07666666667 |25432070       |68169.0     |49052.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|CTG   |76546.64166666666 |25238700       |84185.0     |68524.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|PNJ   |51772.02166666667 |25872600       |59192.0     |44278.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|VCK   |62372.00666666667 |25240700       |75783.0     |49307.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|VCB   |71722.04833333334 |25989760       |89716.0     |54460.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|LPB   |52555.183333333334|28229400       |83500.0     |22011.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|BID   |35904.345         |26720420       |39176.0     |32702.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|TCB   |74656.75          |24624860       |87079.0     |62172.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
+|GAS   |64175.13          |25643640       |99494.0     |29190.0      |2026-05-19 10:58:00|2026-05-19 10:59:00|
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+only showing top 20 rows
+
+26/05/19 11:02:00 WARN HDFSBackedStateStoreProvider: The state for version 12 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 11:02:00 WARN HDFSBackedStateStoreProvider: The state for version 12 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 11:02:00 WARN HDFSBackedStateStoreProvider: The state for version 12 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+🔥 CẢNH BÁO: Phát hiện 23 giao dịch bất thường tại Batch 12!
+26/05/19 11:02:01 WARN HDFSBackedStateStoreProvider: The state for version 12 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
++-------------------+------+----------+------------+-----------+-----------------+
+|window_start       |symbol|alert_type|value_before|value_after|change_percentage|
++-------------------+------+----------+------------+-----------+-----------------+
+|2026-05-19 10:58:00|ACB   |PRICE_JUMP|41039.0     |49711.0    |21.13            |
+|2026-05-19 10:58:00|MSN   |PRICE_JUMP|44486.0     |84568.0    |90.1             |
+|2026-05-19 10:58:00|VHM   |PRICE_JUMP|31607.0     |68184.0    |115.72           |
+|2026-05-19 10:58:00|MWG   |PRICE_JUMP|28082.0     |34019.0    |21.14            |
+|2026-05-19 10:58:00|VIC   |PRICE_JUMP|23425.0     |39196.0    |67.33            |
+|2026-05-19 10:58:00|STB   |PRICE_JUMP|45749.0     |51031.0    |11.55            |
+|2026-05-19 10:58:00|PLX   |PRICE_JUMP|56831.0     |93382.0    |64.32            |
+|2026-05-19 10:58:00|SAB   |PRICE_JUMP|47140.0     |67520.0    |43.23            |
+|2026-05-19 10:58:00|SSI   |PRICE_JUMP|63197.0     |70630.0    |11.76            |
+|2026-05-19 10:58:00|MBB   |PRICE_JUMP|28062.0     |73735.0    |162.76           |
+|2026-05-19 10:58:00|VJC   |PRICE_JUMP|49052.0     |68169.0    |38.97            |
+|2026-05-19 10:58:00|CTG   |PRICE_JUMP|68524.0     |84185.0    |22.85            |
+|2026-05-19 10:58:00|PNJ   |PRICE_JUMP|44278.0     |59192.0    |33.68            |
+|2026-05-19 10:58:00|VCK   |PRICE_JUMP|49307.0     |75783.0    |53.7             |
+|2026-05-19 10:58:00|VCB   |PRICE_JUMP|54460.0     |89716.0    |64.74            |
+|2026-05-19 10:58:00|LPB   |PRICE_JUMP|22011.0     |83500.0    |279.36           |
+|2026-05-19 10:58:00|BID   |PRICE_JUMP|32702.0     |39176.0    |19.8             |
+|2026-05-19 10:58:00|TCB   |PRICE_JUMP|62172.0     |87079.0    |40.06            |
+|2026-05-19 10:58:00|GAS   |PRICE_JUMP|29190.0     |99494.0    |240.85           |
+|2026-05-19 10:58:00|FPT   |PRICE_JUMP|31795.0     |60491.0    |90.25            |
++-------------------+------+----------+------------+-----------+-----------------+
+only showing top 20 rows
+
+26/05/19 11:02:01 WARN HDFSBackedStateStoreProvider: The state for version 12 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+
+--- Đang xử lý Batch ID: 13 ---
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|symbol|gia_trung_binh    |tong_khoi_luong|gia_cao_nhat|gia_thap_nhat|window_start       |window_end         |
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+|VJC   |59145.675         |20296560       |68847.0     |49352.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|VHM   |50000.235         |31531140       |70070.0     |31081.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|BID   |35855.988333333335|22898010       |39105.0     |32940.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|VCB   |72130.03333333334 |25040370       |89353.0     |55429.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|HPG   |66400.56666666667 |25962340       |87317.0     |45992.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|VIC   |30715.056666666667|24673020       |38860.0     |22341.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|MSN   |64078.903333333335|28668670       |84579.0     |43976.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|STB   |48351.38333333333 |23277150       |51089.0     |46027.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|MBB   |50767.56166666667 |26064710       |74194.0     |27768.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|GAS   |65142.725         |25666980       |102260.0    |29462.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|NVL   |72556.74          |24016310       |74451.0     |70773.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|PLX   |74358.09833333333 |23924940       |93124.0     |56260.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|VPB   |69875.73666666666 |25769500       |93961.0     |46076.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|SSI   |67435.73833333333 |26420460       |71569.0     |63062.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|TCB   |74174.185         |22391970       |86981.0     |60783.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|LPB   |52670.433333333334|25381250       |84346.0     |22021.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|ACB   |45827.72          |25688410       |49456.0     |42094.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|SAB   |56626.605         |25856850       |67799.0     |46937.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|VNM   |56556.433333333334|27260680       |80805.0     |32804.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
+|FPT   |46235.405         |26575430       |62123.0     |30791.0      |2026-05-19 10:59:00|2026-05-19 11:00:00|
++------+------------------+---------------+------------+-------------+-------------------+-------------------+
+only showing top 20 rows
+
+26/05/19 11:03:00 WARN HDFSBackedStateStoreProvider: The state for version 13 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 11:03:00 WARN HDFSBackedStateStoreProvider: The state for version 13 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+26/05/19 11:03:00 WARN HDFSBackedStateStoreProvider: The state for version 13 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+🔥 CẢNH BÁO: Phát hiện 24 giao dịch bất thường tại Batch 13!
+26/05/19 11:03:01 WARN HDFSBackedStateStoreProvider: The state for version 13 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
++-------------------+------+----------+------------+-----------+-----------------+
+|window_start       |symbol|alert_type|value_before|value_after|change_percentage|
++-------------------+------+----------+------------+-----------+-----------------+
+|2026-05-19 10:59:00|VJC   |PRICE_JUMP|49352.0     |68847.0    |39.5             |
+|2026-05-19 10:59:00|VHM   |PRICE_JUMP|31081.0     |70070.0    |125.44           |
+|2026-05-19 10:59:00|BID   |PRICE_JUMP|32940.0     |39105.0    |18.72            |
+|2026-05-19 10:59:00|VCB   |PRICE_JUMP|55429.0     |89353.0    |61.2             |
+|2026-05-19 10:59:00|HPG   |PRICE_JUMP|45992.0     |87317.0    |89.85            |
+|2026-05-19 10:59:00|VIC   |PRICE_JUMP|22341.0     |38860.0    |73.94            |
+|2026-05-19 10:59:00|MSN   |PRICE_JUMP|43976.0     |84579.0    |92.33            |
+|2026-05-19 10:59:00|STB   |PRICE_JUMP|46027.0     |51089.0    |11.0             |
+|2026-05-19 10:59:00|MBB   |PRICE_JUMP|27768.0     |74194.0    |167.19           |
+|2026-05-19 10:59:00|GAS   |PRICE_JUMP|29462.0     |102260.0   |247.09           |
+|2026-05-19 10:59:00|NVL   |PRICE_JUMP|70773.0     |74451.0    |5.2              |
+|2026-05-19 10:59:00|PLX   |PRICE_JUMP|56260.0     |93124.0    |65.52            |
+|2026-05-19 10:59:00|VPB   |PRICE_JUMP|46076.0     |93961.0    |103.93           |
+|2026-05-19 10:59:00|SSI   |PRICE_JUMP|63062.0     |71569.0    |13.49            |
+|2026-05-19 10:59:00|TCB   |PRICE_JUMP|60783.0     |86981.0    |43.1             |
+|2026-05-19 10:59:00|LPB   |PRICE_JUMP|22021.0     |84346.0    |283.03           |
+|2026-05-19 10:59:00|ACB   |PRICE_JUMP|42094.0     |49456.0    |17.49            |
+|2026-05-19 10:59:00|SAB   |PRICE_JUMP|46937.0     |67799.0    |44.45            |
+|2026-05-19 10:59:00|VNM   |PRICE_JUMP|32804.0     |80805.0    |146.33           |
+|2026-05-19 10:59:00|FPT   |PRICE_JUMP|30791.0     |62123.0    |101.76           |
++-------------------+------+----------+------------+-----------+-----------------+
+only showing top 20 rows
+
+26/05/19 11:03:01 WARN HDFSBackedStateStoreProvider: The state for version 13 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
