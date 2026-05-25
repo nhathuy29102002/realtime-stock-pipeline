@@ -8,6 +8,8 @@ spark = SparkSession.builder \
     .appName("Realtime-Stock-Pipeline") \
     .config("spark.sql.shuffle.partitions", 1) \
     .config("spark.streaming.stopGracefullyOnShutdown", "true") \
+.   config("spark.sql.streaming.multipleWatermarkPolicy", "max") \
+    .config("spark.sql.streaming.noDataProgressEventInterval", "10000") \
     .getOrCreate()
 
 spark.sparkContext.setLogLevel("WARN")
@@ -118,9 +120,9 @@ def write_to_postgres(batch_df, batch_id):
 pg_query = agg_df.writeStream \
     .trigger(processingTime="1 minute") \
     .foreachBatch(write_to_postgres) \
-    .option("checkpointLocation", "file:///home/hadoop/spark_checkpoints/postgres") \
+    .option("checkpointLocation", f"{HDFS_URI}/checkpoints/postgres") \
     .start()
-
+q
 raw_query = parsed_df \
     .withColumn("date", current_date()) \
     .writeStream \
