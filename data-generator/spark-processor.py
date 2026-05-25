@@ -122,7 +122,7 @@ pg_query = agg_df.writeStream \
     .foreachBatch(write_to_postgres) \
     .option("checkpointLocation", f"{HDFS_URI}/checkpoints/postgres") \
     .start()
-q
+    
 raw_query = parsed_df \
     .withColumn("date", current_date()) \
     .writeStream \
